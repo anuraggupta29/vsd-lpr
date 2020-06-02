@@ -14,23 +14,28 @@
 If a vehicle crosses the set speed limit, license recognition function is executed.
 
 ### License Recognition
-<h4>How It Works?</h4>
 <ol>
-<li>Load the original image.</li>
-<li>Grayscale it.</li>
-<li>Blur it using bilateral filter.</li>
-<li>Automatically generate its canny image basd on median value of pixels.</li>
-<li>Find all contours.</li>
-<li>Remove contours having small perimeter.</li>
-<li>take convex hull of all remaining contours.</li>
-<li>For each convex hull, do the following:</li>
-<ul><li>Take its approxpolydp.</li>
-<li>Try to approximate it as a quadrilateral.</li>
-<li>If quadrilateral, check if it's almost a parallelogram</li>
-<li>If almost parallelogram, check if the ratio of width/height is similar to a license plate.</li>
-<li>Take only those convex hulls which satisfy these conditions.</li></ul>
-<li>Do a perspective transform of the convex hulls.</li>
-<li>Loop over each convex hull, and try to recognize its text.</li>
+<li> On recieving the image it grayscales it.</li>
+<li>Blurs it using bilateral filter.</li>
+<li>Automatically generates its canny image based on median value of pixels.</li>
+<li>Finds all contours.</li>
+<li>Removes contours having small perimeter.</li>
+<li>takes convex hull of all remaining contours.</li>
+<li>For each convex hull, does the following:</li>
+<ul><li>Takes its approxpolydp.</li>
+<li>Tries to approximate it as a quadrilateral.</li>
+<li>If quadrilateral, checks if it's almost a parallelogram</li>
+<li>If almost parallelogram, checks if the ratio of width/height is similar to a license plate.</li>
+<li>Takes only those convex hulls which satisfy these conditions.</li></ul>
+<li>Does a perspective transform of the convex hulls.</li>
+<li>Loops over each convex hull, and tries to recognize its text.</li>
 <li>The convex hull with the longest text is our license plate.</li>
 <li>And the text is our license number.</li>
+<li>Displays the car image and license image and the license text</li>
 <ol>
+  
+The execution of the program pauses after every detection, and resumes again once the user closes the car image window and license image window.
+ 
+ This program requires the following python libraries to function:
+ 
+ opencv, dlib, imutils, numpy, pytesseract (tesseract ocr should also be installed)
