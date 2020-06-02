@@ -36,6 +36,6 @@ If a vehicle crosses the set speed limit, license recognition function is execut
   
 The execution of the program pauses after every detection, and resumes again once the user closes the car image window and license image window.
  
- This program requires the following python libraries to function:
- 
- opencv, dlib, imutils, numpy, pytesseract (tesseract ocr should also be installed)
+This program requires the following python libraries to function:
+
+opencv, dlib, imutils, numpy, pytesseract (tesseract ocr should also be installed)
