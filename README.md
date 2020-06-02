@@ -1,11 +1,13 @@
 ## Vehicle Speed Detection & License Recognition
 #### How to Run
 Clone this repository. 
+
 Open cmd in the directory of this project's folder.
+
 Enter the following command:
 
 ```
-python main.pu
+python main.py
 ```
 
 ### Vehicle Detection
