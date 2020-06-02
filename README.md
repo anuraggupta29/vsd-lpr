@@ -32,7 +32,7 @@ If a vehicle crosses the set speed limit, license recognition function is execut
 <li>The convex hull with the longest text is our license plate.</li>
 <li>And the text is our license number.</li>
 <li>Displays the car image and license image and the license text</li>
-<ol>
+</ol>
   
 The execution of the program pauses after every detection, and resumes again once the user closes the car image window and license image window.
  
